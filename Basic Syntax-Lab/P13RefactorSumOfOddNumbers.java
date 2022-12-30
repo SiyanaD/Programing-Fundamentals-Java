@@ -19,5 +19,6 @@ public class P13RefactorSumOfOddNumbers {
             }
         }
         System.out.printf("Sum: %d",sum);
+
     }
 }
