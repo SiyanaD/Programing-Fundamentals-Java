@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 public class P01SumAdjacentEqualNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         List<Double> numbersList = Arrays.stream(scanner.nextLine().split(" ")).
                 map(Double::parseDouble).collect(Collectors.toList());
 
@@ -38,5 +37,4 @@ public class P01SumAdjacentEqualNumbers {
         }
         return result;
     }
-
 }

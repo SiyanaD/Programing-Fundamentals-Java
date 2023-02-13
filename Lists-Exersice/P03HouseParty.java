@@ -1,10 +1,10 @@
-package ListsExercise;
+package ListsExersice;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class P3HouseParty {
+public class P03HouseParty {
     public static void main(String[] args) {
         Scanner scanner =new Scanner(System.in);
 
@@ -25,7 +25,7 @@ public class P3HouseParty {
                     guests.add(name);
 
                 }
-                
+
             } else if (command.contains("is not going!")) {
 
                 if (guests.contains(name)){

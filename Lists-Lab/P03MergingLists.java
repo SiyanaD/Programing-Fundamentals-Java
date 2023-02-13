@@ -13,23 +13,28 @@ public class P03MergingLists {
                 .collect(Collectors.toList());
         List<Integer> secondList = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt)
                 .collect(Collectors.toList());
+
         List<Integer> resultList = new ArrayList<>();
+
         int minSizeList = Math.min(firstList.size(),secondList.size());
         for (int i = 0; i <minSizeList ; i++) {
+
             int numFirstList =firstList.get(i);
             int numSecondList = secondList.get(i);
             resultList.add(numFirstList);
-            resultList.add(numSecondList);
-            if (firstList.size()>secondList.size()){
-                resultList.addAll(firstList.subList(minSizeList,firstList.size()));
+            resultList.add(numSecondList);}
 
-            } else if (secondList.size()>firstList.size()) {
-                resultList.addAll(secondList.subList(minSizeList,secondList.size()));
+        if (firstList.size()>secondList.size()){
+            resultList.addAll(firstList.subList(minSizeList,firstList.size()));
 
+        } else if (secondList.size()>firstList.size()) {
+            resultList.addAll(secondList.subList(minSizeList,secondList.size()));
 
-            }
-            System.out.println(resultList.toString().replaceAll("[\\[\\],]",""));
 
         }
+
+
+
+        System.out.println(resultList.toString().replaceAll("[\\[\\],]",""));
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class P2GaussTrick {
+public class P02GaussTrick {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -16,8 +16,8 @@ public class P2GaussTrick {
             int firstNum = numbersList.get(i);
             int secondNum = numbersList.get(numbersList.size()-1);
 
-           numbersList.set(i,firstNum+secondNum);
-           numbersList.remove(numbersList.size()-1);
+            numbersList.set(i,firstNum+secondNum);
+            numbersList.remove(numbersList.size()-1);
 
         }
         for (int item:numbersList) {

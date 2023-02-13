@@ -1,12 +1,11 @@
-package ListsExercise;
-
+package ListsExersice;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class P4ListOperations {
+public class P04ListOperations {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Integer> numbers = Arrays.stream(scanner.nextLine().split(" "))
@@ -16,7 +15,7 @@ public class P4ListOperations {
             if (command.contains("Add")){
                 int numberToAdd= Integer.parseInt(command.split("\\s+")[1]);
                 numbers.add(numberToAdd);
-                
+
             } else if (command.contains("Insert")) {
                 String[] commandParts = command.split("\\s+");
                 int numberToInsert = Integer.parseInt(commandParts[1]);
@@ -36,7 +35,7 @@ public class P4ListOperations {
                 else {
                     System.out.println("Invalid index");
                 }
-                
+
             } else if (command.contains("Shift left")) {
                 int countShiftLeft = Integer.parseInt(command.split("\\s+")[2]);
                 for (int time = 1; time <=countShiftLeft ; time++) {
@@ -44,7 +43,7 @@ public class P4ListOperations {
                     numbers.remove(0);
                     numbers.add(firstNumber);
                 }
-                
+
             } else if (command.contains("Shift right")) {
                 int countShiftRight = Integer.parseInt(command.split("\\s+")[2]);
                 for (int timeR = 1; timeR <=countShiftRight; timeR++) {
@@ -53,7 +52,7 @@ public class P4ListOperations {
                     numbers.add(0,lastNumber);
 
                 }
-                
+
             }
 
             command=scanner.nextLine();
