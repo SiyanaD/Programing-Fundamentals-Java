@@ -28,17 +28,21 @@ public class P03Numbers {
         Collections.sort(newElements);
         Collections.reverse(newElements);
 
-        while (count<=5){
+       if (newElements.size()>0){
+           if (newElements.size()<5){
+               System.out.print(newElements.toString().replaceAll("[\\[\\],]",""));
+           }
+           else {
+               List<Integer> top5Numbers = newElements.subList(0,5);
+               for (int item:top5Numbers) {
+                   System.out.print(item + " ");
+               }
+           }
 
-            for (int item:newElements) {
-                System.out.print(item + " ");
-            }
-            count++;
-        }
-        //if (){
-
-       //     System.out.println("No");
-       // }
+       }
+       else {
+           System.out.println("No");
+       }
 
     }
 }
